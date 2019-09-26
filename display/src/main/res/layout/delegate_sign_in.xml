@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:id="@+id/sign_in_tool_bar"
+        android:layout_height="40dp"
+        android:background="@color/Green">
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="请您填写身份确认信息"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            tools:ignore="HardcodedText" />
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingTop="56dp">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="24dp"
+                android:src="@mipmap/indexlog" />
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_margin="10dp"
+                android:layout_width="150dp"
+                android:padding="20dp"
+                android:id="@+id/img_sign_in_photo"
+                android:background="@drawable/photo_bg"
+                android:src="@drawable/photo"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_height="150dp" />
+        <android.support.v7.widget.LinearLayoutCompat
+             android:orientation="vertical"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:text="编                      号:"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:textSize="30sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="50dp" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:id="@+id/edit_sign_in_id"
+                    android:hint="请输入用户编"
+                    android:textColorHint="@color/Gray"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+
+                    android:textSize="30sp"
+                    android:layout_height="60dp" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+            <TextView
+                android:layout_width="match_parent"
+                android:background="@color/Apricot"
+                android:layout_height="1px" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:text="姓                      名:"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:textSize="30sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="50dp" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:id="@+id/edit_sign_in_name"
+                    android:hint="请输入用户姓名"
+                    android:textColorHint="@color/Gray"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:textSize="30sp"
+                    android:layout_height="50dp" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+            <TextView
+                android:layout_width="match_parent"
+                android:background="@color/Apricot"
+                android:layout_height="1px" />
+
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="50dp"
+                    android:text="部职别/所属单位:"
+               />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:id="@+id/edit_sign_in_department"
+                    android:hint="请输入部职别/所属单位"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/Gray"
+                    android:textSize="30sp"
+                    android:background="@null"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="50dp" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+            <TextView
+                android:layout_width="match_parent"
+                android:background="@color/Apricot"
+                android:layout_height="1px" />
+
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="密                      码:"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="50dp" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:id="@+id/edit_sign_in_password"
+                    android:hint="请输入密码"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/Gray"
+                    android:textSize="30sp"
+                    android:inputType="textPassword"
+
+                    android:background="@null"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="50dp" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+            <TextView
+                android:layout_width="match_parent"
+                android:background="@color/Apricot"
+                android:layout_height="1px" />
+        </android.support.v7.widget.LinearLayoutCompat>
+        </android.support.v7.widget.LinearLayoutCompat>
+            <Button
+                android:id="@+id/btn_sign_in"
+                android:text="确  认"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:layout_gravity="center"
+                android:layout_width="200dp"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_bg"
+                android:layout_height="40dp" />
+        </android.support.v7.widget.LinearLayoutCompat>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.v7.widget.LinearLayoutCompat>

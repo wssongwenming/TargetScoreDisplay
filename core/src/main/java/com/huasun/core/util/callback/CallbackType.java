@@ -1,0 +1,16 @@
+package com.huasun.core.util.callback;
+
+public enum CallbackType {
+    ON_CROP,
+    TAG_OPEN_PUSH,
+    TAG_STOP_PUSH,
+    ON_SCAN,
+    ON_BIND_BOXID,
+    ON_GET_MEDICINE_PLAN_INDEX,
+    ON_GET_MEDICINE_PLAN,
+    ON_GET_MEDICINE_HISTORY,
+    ON_DELETE_BOXID,
+    ON_CHANGE_BOXID_FOR_HISTORY,
+    ON_CHANGE_BOXID_FOR_RECENT_USE,
+    ON_SCAN_BOXID
+}
