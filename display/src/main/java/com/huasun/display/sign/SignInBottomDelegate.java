@@ -38,9 +38,10 @@ public class SignInBottomDelegate extends BaseBottomDelegate {
     @Override
     public LinkedHashMap<BottomTabBean, BottomItemDelegate> setItems(ItemBuilder builder) {
         final LinkedHashMap<BottomTabBean,BottomItemDelegate>items=new LinkedHashMap<>();
-        items.put(new BottomTabBean("{icon-medicinemanage}","密码登陆"),new SignInByPassDelegate());
-        items.put(new BottomTabBean("{icon-index}","人脸识别登陆"),new SignByFaceRecDelegate());
-        items.put(new BottomTabBean("{icon-index}","等候中"), new LauncherDelegate());
+        items.put(new BottomTabBean("{icon-wait}","等候中"), new LauncherDelegate());
+        items.put(new BottomTabBean("{icon-signin-by-pass}","密码登陆"),new SignInByPassDelegate());
+        items.put(new BottomTabBean("{icon-signin-by-face}","人脸识别登陆"),new SignByFaceRecDelegate());
+
         return builder.addItems(items).build();
     }
 /*    public static SignInBottomDelegate newInstance(int signInWay){

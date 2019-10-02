@@ -54,11 +54,9 @@ public class MainActivity extends ProxyActivity implements ISignListener,ILaunch
         Latte.getConfigurator().withActivity(this);
         //开始消息队列
         // Create the consumer
-
         mConsumer = new MessageConsumer(server, exchange_name, exchange_type,port,username,password);
         new consumerconnect().execute();
         mConsumer.setOnReceiveMessageHandler(new MessageConsumer.OnReceiveMessageHandler() {
-
             public void onReceiveMessage(byte[] message) {
                 Command command=null;
                 String text = "";
@@ -92,7 +90,6 @@ public class MainActivity extends ProxyActivity implements ISignListener,ILaunch
             }
         });
     }
-
     @Override
     public LatteDelegate setRootDelegate() {
         //return new LauncherDelegate();

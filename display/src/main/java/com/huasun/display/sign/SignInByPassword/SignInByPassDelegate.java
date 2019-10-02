@@ -38,7 +38,7 @@ public class SignInByPassDelegate extends BottomItemDelegate {
     void onClickSignIn(){
         if(checkForm()){
             RestClient.builder()
-                    .url("http://192.168.43.167:8081/Web01_exec/UserLogin")
+                    .url("http://192.168.1.3:8081/Web01_exec/UserLogin")
                     .params("id",mId.getText().toString())
                     .params("password",mPassword.getText().toString())
                     .success(new ISuccess() {

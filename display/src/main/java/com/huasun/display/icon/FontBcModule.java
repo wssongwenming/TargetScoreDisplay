@@ -11,7 +11,7 @@ import com.joanzapata.iconify.IconFontDescriptor;
 public class FontBcModule implements IconFontDescriptor {
     @Override
     public String ttfFileName() {
-        return "icon.ttf";
+        return "iconfont.ttf";
     }
 
     @Override
