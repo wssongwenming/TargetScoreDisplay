@@ -1,4 +1,4 @@
-package com.huasun.display.sign;
+package com.huasun.display.sign.SignInByPassword;
 
 
 import com.alibaba.fastjson.JSON;
@@ -7,6 +7,7 @@ import com.huasun.core.app.AccountManager;
 import com.huasun.core.util.log.LatteLogger;
 import com.huasun.display.database.DatabaseManager;
 import com.huasun.display.database.UserProfile;
+import com.huasun.display.sign.ISignListener;
 
 /**
  * author:songwenming

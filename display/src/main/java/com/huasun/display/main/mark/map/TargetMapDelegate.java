@@ -1,11 +1,10 @@
-package com.huasun.display.main.index;
+package com.huasun.display.main.mark.map;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.view.KeyEvent;
 import android.view.View;
 
-import com.huasun.core.delegates.bottom.BottomItemDelegate;
+import com.huasun.core.delegates.LatteDelegate;
 import com.huasun.display.R;
 
 /**
@@ -13,11 +12,10 @@ import com.huasun.display.R;
  * Date:2019/9/26
  * Description:
  */
-public class IndexDelegate extends BottomItemDelegate {
-
+public class TargetMapDelegate extends LatteDelegate{
     @Override
     public Object setLayout() {
-        return R.layout.delegate_index;
+        return R.layout.delegate_target_map;
     }
 
     @Override

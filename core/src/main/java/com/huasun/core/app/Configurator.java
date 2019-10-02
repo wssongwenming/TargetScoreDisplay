@@ -20,6 +20,7 @@ import okhttp3.Interceptor;
 public class Configurator {
     private static final HashMap<Object,Object> LATTE_CONFIGS=new HashMap<>();
     private static final ArrayList<IconFontDescriptor> ICONS= new ArrayList<>();
+    private static  int SignInWay=-1;
     private static final ArrayList<Interceptor> INTERCEPTORS=new ArrayList<>();
     private static final Handler HANDLER=new Handler();
 
@@ -49,6 +50,11 @@ public class Configurator {
     public final Configurator withActivity(Activity activity)
     {
         LATTE_CONFIGS.put(ConfigKeys.ACTIVITY,activity);
+        return this;
+    }
+
+    public final Configurator withCommand(int command){
+        LATTE_CONFIGS.put(ConfigKeys.COMMAND,command);
         return this;
     }
     public final Configurator withApiHost(String host){

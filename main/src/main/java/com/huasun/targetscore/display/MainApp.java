@@ -2,6 +2,7 @@ package com.huasun.targetscore.display;
 
 import android.app.Application;
 
+import com.bcsb.rabbitmq.entity.Command;
 import com.huasun.core.app.Latte;
 import com.huasun.core.net.interceptors.DebugInterceptor;
 import com.huasun.display.database.DatabaseManager;
@@ -20,6 +21,7 @@ public class MainApp extends Application {
         Latte.init(this)
                 .withIcon(new FontAwesomeModule())
                 .withIcon(new FontBcModule())
+                .withCommand(Command.waiting.getIndex())
                 .withApiHost("http://127.0.0.1")
                 .withInterceptor(new DebugInterceptor("index",R.raw.test))
                 .configure();

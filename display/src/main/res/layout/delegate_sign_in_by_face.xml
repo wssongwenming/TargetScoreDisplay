@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="2dp"
+    android:background="@drawable/background"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+       <!--SurfaceViews-->
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="#66ffffff"
+            android:paddingRight="15dp"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:paddingLeft="15dp"
+            android:orientation="vertical" >
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/iv_photo"
+                android:layout_width="70dp"
+                android:background="@color/Gray0"
+                android:layout_gravity="center"
+                android:layout_height="match_parent" />
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_no"
+                android:layout_width="wrap_content"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:textColor="@color/darkRed"
+                android:layout_height="wrap_content"/>
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:textColor="@color/darkRed"
+                android:layout_height="wrap_content"/>
+        </android.support.v7.widget.LinearLayoutCompat>
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iv_tv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@color/Gray0"
+            android:layout_gravity="center"
+            android:layout_height="match_parent" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v7.widget.LinearLayoutCompat>

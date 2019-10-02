@@ -12,5 +12,8 @@
         android:text="{fa-coffee}"
         tools.ignore="HardcodedText"
         />
-
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/textview"/>
 </android.support.constraint.ConstraintLayout>

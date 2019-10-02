@@ -13,6 +13,8 @@ public enum ConfigKeys {
     //配置是否完成
     CONFIG_READY,
     ICON,
+    //表示登陆，射击，
+    COMMAND,
     LOADER_DELAYED,
     INTERCEPTOR,
     WE_CHAT_APP_ID,

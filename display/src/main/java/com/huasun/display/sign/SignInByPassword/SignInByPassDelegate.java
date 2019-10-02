@@ -1,4 +1,4 @@
-package com.huasun.display.sign;
+package com.huasun.display.sign.SignInByPassword;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,11 +7,13 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.huasun.core.delegates.LatteDelegate;
+import com.huasun.core.delegates.bottom.BottomItemDelegate;
 import com.huasun.core.net.RestClient;
 import com.huasun.core.net.callback.ISuccess;
-import com.huasun.core.util.regex.RegexTool;
+import com.huasun.core.util.timer.ITimerListener;
 import com.huasun.display.R;
 import com.huasun.display.R2;
+import com.huasun.display.sign.ISignListener;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -21,7 +23,8 @@ import butterknife.OnClick;
  * Date:2019/9/23
  * Description:
  */
-public class SignInDelegate extends LatteDelegate  {
+public class SignInByPassDelegate extends BottomItemDelegate {
+
     @BindView(R2.id.edit_sign_in_id)
     EditText mId=null;
     @BindView(R2.id.edit_sign_in_name)
@@ -59,7 +62,7 @@ public class SignInDelegate extends LatteDelegate  {
 
     @Override
     public Object setLayout() {
-        return R.layout.delegate_sign_in;
+        return R.layout.delegate_sign_in_by_password;
     }
 
 
@@ -99,4 +102,6 @@ public class SignInDelegate extends LatteDelegate  {
         }
         return isPass;
     }
+
+
 }

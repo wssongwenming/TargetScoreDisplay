@@ -1,5 +1,6 @@
 package com.huasun.core.delegates.bottom;
 
+import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.ColorInt;
@@ -13,6 +14,7 @@ import android.widget.RelativeLayout;
 import com.huasun.core.R;
 import com.huasun.core.R2;
 import com.huasun.core.delegates.LatteDelegate;
+import com.huasun.core.ui.launcher.ILauncherListener;
 import com.huasun.core.util.log.LatteLogger;
 import com.joanzapata.iconify.widget.IconTextView;
 
@@ -29,9 +31,10 @@ import me.yokeyword.fragmentation.SupportFragment;
  * Description:
  */
 public abstract class BaseBottomDelegate extends LatteDelegate implements View.OnClickListener {
-    private final ArrayList<BottomItemDelegate> ITEM_DELEGATES=new ArrayList<>();
+
+    private final ArrayList<LatteDelegate> ITEM_DELEGATES=new ArrayList<>();
     private final ArrayList<BottomTabBean> TAB_BEANS=new ArrayList<>();
-    private final LinkedHashMap<BottomTabBean,BottomItemDelegate> ITEMS=new LinkedHashMap<>();
+    private final LinkedHashMap<BottomTabBean,LatteDelegate> ITEMS=new LinkedHashMap<>();
     //当前Fragment是哪一个
     private int mCurrentDelegate=0;
     //进入页面后第一个展示的delegate
@@ -49,7 +52,15 @@ public abstract class BaseBottomDelegate extends LatteDelegate implements View.O
     public abstract  int setIndexDelegate();
     @ColorInt
     public abstract int setClickedColor();
+    private ILauncherListener mILauncherListener=null;
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        if(activity instanceof ILauncherListener){
+            mILauncherListener=(ILauncherListener) activity;
 
+        }
+    }
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,9 +71,9 @@ public abstract class BaseBottomDelegate extends LatteDelegate implements View.O
         final ItemBuilder builder=ItemBuilder.builder();
         final LinkedHashMap<BottomTabBean,BottomItemDelegate> items=setItems(builder);
         ITEMS.putAll(items);
-        for(Map.Entry<BottomTabBean,BottomItemDelegate>item:ITEMS.entrySet()){
+        for(Map.Entry<BottomTabBean,LatteDelegate>item:ITEMS.entrySet()){
             final BottomTabBean key=item.getKey();
-            final BottomItemDelegate value=item.getValue();
+            final LatteDelegate value=item.getValue();
             TAB_BEANS.add(key);
             ITEM_DELEGATES.add(value);
         }
@@ -125,5 +136,17 @@ public abstract class BaseBottomDelegate extends LatteDelegate implements View.O
         //show一个Fragment,hide一个Fragment ; 主要用于类似微信主页那种 切换tab的情况
         showHideFragment(ITEM_DELEGATES.get(tag),ITEM_DELEGATES.get(mCurrentDelegate));
         mCurrentDelegate=tag;
+    }
+
+    public ArrayList<LatteDelegate> getITEM_DELEGATES() {
+        return ITEM_DELEGATES;
+    }
+
+    public ArrayList<BottomTabBean> getTAB_BEANS() {
+        return TAB_BEANS;
+    }
+
+    public LinkedHashMap<BottomTabBean, LatteDelegate> getITEMS() {
+        return ITEMS;
     }
 }
