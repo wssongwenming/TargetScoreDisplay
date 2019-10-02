@@ -57,6 +57,7 @@ public class Configurator {
         LATTE_CONFIGS.put(ConfigKeys.COMMAND,command);
         return this;
     }
+
     public final Configurator withApiHost(String host){
         LATTE_CONFIGS.put(ConfigKeys.API_HOST,host);
         return this;
